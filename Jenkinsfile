@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${env.DOCKER_HUB_USER}/weather-forecast:latest src/WeatherForecast.WebApi/"
+                    sh "docker build -t ${env.DOCKER_HUB_USER}/weather-forecast:latest -f src/WeatherForecast.WebApi/Dockerfile ."
                 }
             }
         }
