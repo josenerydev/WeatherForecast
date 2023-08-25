@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     // Construindo a imagem Docker
-                    sh 'docker build -t josenerydev/WeatherForecast:latest .'
+                    sh 'docker build -t josenerydev/weather-forecast:latest .'
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
                     }
 
                     // Enviando a imagem para o Docker Hub
-                    sh 'docker push josenerydev/WeatherForecast:latest'
+                    sh 'docker push josenerydev/weather-forecast:latest'
                 }
             }
         }
